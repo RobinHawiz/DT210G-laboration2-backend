@@ -28,7 +28,7 @@ export const todoIdParamSchema: JSONSchemaType<{ id: number }> = {
 export const todoPayloadSchema: JSONSchemaType<TodoPayload> = {
   type: "object",
   properties: {
-    title: { type: "string", maxLength: 100, minLength: 1 },
+    title: { type: "string", maxLength: 100, minLength: 3 },
     status: {
       type: "string",
       enum: [Status.NotStarted, Status.InProgress, Status.Completed],
